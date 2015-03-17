@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Login service for mailchimp accounts",
-  version: "0.0.7",
+  version: "0.0.8",
   git: "https://github.com/tsega/meteor-accounts-mailchimp"
 });
 
