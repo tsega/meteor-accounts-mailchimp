@@ -1,6 +1,6 @@
 ## accounts-mailchimp
 
-Mailchimp OAuth2 login service for use with Meteor Auth
+Mailchimp OAuth2 login service for use with Meteor Auth, originally by @diyahm
 
 ### Package Dependencies
 
@@ -9,7 +9,7 @@ Mailchimp OAuth2 login service for use with Meteor Auth
 
 ### Usage
 
-1. `mrt add accounts-mailchimp`
+1. `meteor add tsega:accounts-mailchimp`
 2. Read the Meteor docs [Meteor.loginWithExternalService](http://docs.meteor.com/#meteor_loginwithexternalservice) and make sure you set up your config and secret correctly.
 3. Call `Meteor.loginWithMailchimp();`
 
