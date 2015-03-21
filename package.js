@@ -1,34 +1,29 @@
 Package.describe({
-  summary: "Login service for mailchimp accounts",
-  version: "0.0.12",
+  summary: "Login service for Mailchimp Accounts",
+  version: "0.0.13",
   git: "https://github.com/tsega/meteor-accounts-mailchimp"
 });
 
 Package.on_use(function(api) {
-    api.versionsFrom('METEOR@0.9.0');
+  api.versionsFrom('METEOR@0.9.0');
 
-    api.use('accounts-base', ['client', 'server']);
-    api.use('accounts-oauth', ['client', 'server']);
-
-    api.use('oauth', ['client', 'server']);
-    api.use('oauth2', ['client', 'server']);
-    api.use('http', ['server']);
-    api.use('underscore', 'server');
-    api.use('templating', 'client');
-    api.use('random', 'client');
-    api.use('service-configuration', ['client', 'server']);
-
-    api.add_files(
+  api.use(
     [
-        'lib/mailchimp_configuration.html',
-        'lib/mailchimp_configuration.js',
-        'lib/mailchimp_login_button.css'
+    'accounts-base@1.1.4-winr.3',
+    'accounts-oauth@1.1.4-winr.2',
+    'tsega:mailchimp@0.0.1'
+    ], ['client', 'server']);
+
+  api.addFiles(
+    [
+      'mailchimp.js',
+      'mailchimp_login_button.css'
     ],
     'client');
 
-    api.add_files("lib/accounts_mailchimp.js");
-    api.add_files('lib/mailchimp_common.js', ['client', 'server']);
-    api.add_files('lib/mailchimp_client.js', 'client');
-    api.add_files('lib/mailchimp_server.js', 'server');
+  api.addFiles(
+    [
+      'mailchimp.js'
+    ],
+    'server');
 });
-
