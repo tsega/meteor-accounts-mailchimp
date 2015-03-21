@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Login service for Mailchimp Accounts",
-  version: "0.0.13",
+  version: "0.0.14",
   git: "https://github.com/tsega/meteor-accounts-mailchimp"
 });
 
@@ -11,7 +11,7 @@ Package.on_use(function(api) {
     [
     'accounts-base@1.1.4-winr.3',
     'accounts-oauth@1.1.4-winr.2',
-    'tsega:mailchimp@0.0.1'
+    'tsega:mailchimp@0.0.2'
     ], ['client', 'server']);
 
   api.addFiles(
